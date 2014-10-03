@@ -1,8 +1,9 @@
 #pragma once
+
 #include <vector>
 #include <deque>
-#include <map>
 #include <string>
+#include <map>
 
 /***********************************************************************
 HTTP Utility
@@ -10,7 +11,7 @@ HTTP Utility
 
 class HttpRequest {
 	typedef std::vector<char>							BodyBuffer;
-	typedef std::deque<std::wstring>					Stringdeque;
+	typedef std::deque<std::wstring>					StringList;
 	typedef std::map<std::wstring, std::wstring>		HeaderMap;
 public:
 	std::wstring				server;
@@ -23,7 +24,7 @@ public:
 	std::wstring				cookie;
 	BodyBuffer					body;
 	std::wstring				contentType;
-	Stringdeque					acceptTypes;
+	StringList					acceptTypes;
 	HeaderMap					extraHeaders;
 
 	HttpRequest();
